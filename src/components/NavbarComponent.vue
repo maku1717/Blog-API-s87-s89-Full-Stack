@@ -25,27 +25,36 @@
         class="create-btn"
         :to="{ path: '/createPost' }"
         v-if="user.token"
+        @click="isOpen = false"
       >
         Create Post
       </router-link>
 
-      <router-link class="home fw-bold" :to="{ path: '/' }">Home</router-link>
+      <router-link
+        class="home fw-bold"
+        :to="{ path: '/' }"
+        @click="isOpen = false"
+        >Home</router-link
+      >
       <router-link
         class="register fw-bold"
         :to="{ path: '/register' }"
         v-if="!user.token"
+        @click="isOpen = false"
         >Register</router-link
       >
       <router-link
         class="logout fw-bold"
         :to="{ path: '/login' }"
         v-if="!user.token"
+        @click="isOpen = false"
         >Login</router-link
       >
       <router-link
         class="login fw-bold"
         :to="{ path: '/logout' }"
         v-if="user.token"
+        @click="isOpen = false"
         >Logout</router-link
       >
     </div>
@@ -53,11 +62,20 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref, watch } from "vue";
 import { useGlobalStore } from "../stores/global";
+import { useRoute } from "vue-router";
 const { user } = useGlobalStore();
 
+const route = useRoute();
+
 const isOpen = ref(false);
+watch(
+  () => route.path,
+  () => {
+    isOpen.value = false;
+  }
+);
 </script>
 
 
