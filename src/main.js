@@ -9,7 +9,7 @@ import { createPinia } from "pinia";
 import App from "./App.vue";
 
 // pages
-import RegisterPage from "./pages/registerPage.vue";
+import RegisterPage from "./pages/RegisterPage.vue";
 import LogoutPage from "./pages/LogoutPage.vue";
 import LoginPage from "./pages/LoginPage.vue";
 import HomePage from "./pages/HomePage.vue";
