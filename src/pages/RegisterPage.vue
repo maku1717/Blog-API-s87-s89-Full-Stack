@@ -289,4 +289,10 @@ body {
     font-size: 22px;
   }
 }
+
+@media (max-width: 376px) {
+  .container {
+    margin-top: 100px;
+  }
+}
 </style>

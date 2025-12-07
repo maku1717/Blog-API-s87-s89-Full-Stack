@@ -256,4 +256,10 @@ const goToSignup = () => {
     font-size: 15px;
   }
 }
+
+@media (max-width: 376px) {
+  .container {
+    margin-top: 100px;
+  }
+}
 </style>
