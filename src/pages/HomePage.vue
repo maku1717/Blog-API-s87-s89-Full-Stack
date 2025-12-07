@@ -706,7 +706,7 @@ a {
   font-size: 14px;
   color: #777;
 }
-@media (max-width: 376px) {
+@media (max-width: 768px) {
   .sidebar {
     margin-top: 100px;
   }

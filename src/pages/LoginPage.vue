@@ -257,7 +257,7 @@ const goToSignup = () => {
   }
 }
 
-@media (max-width: 376px) {
+@media (max-width: 768px) {
   .container {
     margin-top: 100px;
   }
